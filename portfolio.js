@@ -50,6 +50,32 @@ document.addEventListener('DOMContentLoaded', () => {
     if (window.innerWidth <= 900 && mainNav) mainNav.style.display = '';
   }
 
+// ============================================================
+  // GESTION DU SOUS-MENU MOBILE (Clic sur la flèche uniquement)
+  // ============================================================
+  
+  // On cible uniquement les flèches dans les éléments qui ont un menu
+  const menuArrows = document.querySelectorAll('.has-dropdown .arrow');
+
+  menuArrows.forEach(arrow => {
+    arrow.addEventListener('click', (e) => {
+      // On vérifie si on est sur mobile
+      if (window.innerWidth <= 900) {
+        
+        // 1. IMPORTANT : On empêche le lien parent (<a>) de s'activer
+        e.preventDefault();
+        // 2. On empêche le clic de remonter (bubbling)
+        e.stopPropagation();
+        
+        // 3. On récupère le parent <li> (l'élément de liste)
+        const listItem = arrow.closest('li');
+        
+        // 4. On bascule la classe active
+        listItem.classList.toggle('active');
+      }
+    });
+  });
+
 
   // ============================================================
   // 2. GESTION DU ZOOM IMAGE (LIGHTBOX)
