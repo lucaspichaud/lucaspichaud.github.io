@@ -1,152 +1,107 @@
-// portfolio.js
-// Code robuste — s'exécute après le chargement du HTML
-
 document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', (e) => {
+            const targetId = a.getAttribute('href').slice(1);
+            if (!targetId) return;
+            const el = document.getElementById(targetId);
+            if (el) {
+                e.preventDefault();
+                const headerOffset = 80;
+                const elementPosition = el.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.scrollY - headerOffset;
 
-  // ============================================================
-  // 1. GESTION DE LA NAVIGATION (Scroll & Mobile)
-  // ============================================================
-
-  // Smooth scroll pour toutes les ancres internes
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', (e) => {
-      const targetId = a.getAttribute('href').slice(1);
-      if (!targetId) return;
-      const el = document.getElementById(targetId);
-      if (el) {
-        e.preventDefault();
-        // Scroll fluide en tenant compte de la hauteur de la barre fixe (env. 70px)
-        const headerOffset = 80;
-        const elementPosition = el.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.scrollY - headerOffset;
-
-        window.scrollTo({
-            top: offsetPosition,
-            behavior: "smooth"
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                });
+                closeMobileNav();
+            }
         });
-
-        // Fermer le menu mobile si ouvert
-        closeMobileNav();
-      }
     });
-  });
+    const navToggle = document.getElementById('nav-toggle');
+    const mainNav = document.getElementById('main-nav');
 
-  // Toggle pour le menu mobile
-  const navToggle = document.getElementById('nav-toggle');
-  const mainNav = document.getElementById('main-nav');
+    if (navToggle && mainNav) {
+        navToggle.addEventListener('click', () => {
+            mainNav.style.display = mainNav.style.display === 'block' ? '' : 'block';
+        });
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 900) mainNav.style.display = '';
+        });
+    }
 
-  if (navToggle && mainNav) {
-    navToggle.addEventListener('click', () => {
-      mainNav.style.display = mainNav.style.display === 'block' ? '' : 'block';
+    function closeMobileNav() {
+      if (window.innerWidth <= 900 && mainNav) mainNav.style.display = '';
+    }
+
+
+    const dropdownToggles = document.querySelectorAll('.has-dropdown > a');
+    dropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', (e) => {
+            if (window.innerWidth <= 900) {
+                e.preventDefault();
+                toggle.parentElement.classList.toggle('active');
+            }
+        });
     });
-    
-    // Fermer le menu si on repasse en format bureau
-    window.addEventListener('resize', () => {
-      if (window.innerWidth > 900) mainNav.style.display = '';
+
+
+    const modal = document.getElementById("zoom-modal");
+    const modalImg = document.getElementById("img-to-zoom");
+    const captionText = document.getElementById("caption");
+    const closeBtn = document.getElementsByClassName("close-modal")[0];
+    const zoomableImages = document.querySelectorAll('.program-images img, .referentiel-img img, .dual-images img');
+    zoomableImages.forEach(img => {
+        img.addEventListener('click', function(){
+            if (modal) {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                const figcaption = this.nextElementSibling; 
+                if (figcaption && figcaption.tagName === 'FIGCAPTION') {
+                    captionText.innerHTML = figcaption.innerHTML;
+                } else {
+                    captionText.innerHTML = this.alt;
+                }
+            }
+        });
     });
-  }
 
-  function closeMobileNav() {
-    if (window.innerWidth <= 900 && mainNav) mainNav.style.display = '';
-  }
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+            modal.style.display = "none";
+        });
+    }
 
-  // ============================================================
-  // GESTION DU SOUS-MENU MOBILE (Dropdown Click)
-  // ============================================================
-  
-  const dropdownToggles = document.querySelectorAll('.has-dropdown > a');
+    if (modal) {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    }
 
-  dropdownToggles.forEach(toggle => {
-    toggle.addEventListener('click', (e) => {
-      // On vérifie si on est sur mobile (largeur écran <= 900px)
-      if (window.innerWidth <= 900) {
-        // Empêche le lien de nous emmener ailleurs tout de suite
-        e.preventDefault();
-        
-        // On bascule la classe 'active' sur le parent <li>
-        // Cela va déclencher le display: block du CSS
-        toggle.parentElement.classList.toggle('active');
-      }
+
+    const revealElements = document.querySelectorAll(
+        '.text-block, .info-card, .formation-block, .ac-section-wrapper, .presentation-photo, .section h2, .pdf-wrapper, .competence-card, .lexique-card, .program-images, .dual-images, .section > p, .section > ul, .ac-separator'
+    );
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                setTimeout(() => {
+                    entry.target.classList.remove('reveal', 'active');
+                }, 800);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        root: null,
+        threshold: 0.1,
+        rootMargin: "0px"
     });
-  });
 
-
-  // ============================================================
-  // 2. GESTION DU ZOOM IMAGE (LIGHTBOX)
-  // ============================================================
-
-  const modal = document.getElementById("zoom-modal");
-  const modalImg = document.getElementById("img-to-zoom");
-  const captionText = document.getElementById("caption");
-  const closeBtn = document.getElementsByClassName("close-modal")[0];
-
-  // Sélectionner toutes les images qu'on veut pouvoir zoomer
-  // (Images du programme, du référentiel et les images doubles)
-  const zoomableImages = document.querySelectorAll('.program-images img, .referentiel-img img, .dual-images img');
-
-  zoomableImages.forEach(img => {
-    img.addEventListener('click', function(){
-      if (modal) {
-        modal.style.display = "block";
-        modalImg.src = this.src;
-        
-        // On essaie de récupérer la légende (figcaption) ou le texte alternatif (alt)
-        const figcaption = this.nextElementSibling; 
-        if (figcaption && figcaption.tagName === 'FIGCAPTION') {
-              captionText.innerHTML = figcaption.innerHTML;
-        } else {
-              captionText.innerHTML = this.alt;
-        }
-      }
+    revealElements.forEach(el => {
+        el.classList.add('reveal');
+        revealObserver.observe(el);
     });
-  });
-
-  // Fermer la modale en cliquant sur la croix
-  if (closeBtn) {
-    closeBtn.addEventListener('click', () => {
-      modal.style.display = "none";
-    });
-  }
-
-  // Fermer aussi si on clique en dehors de l'image (sur le fond sombre)
-  if (modal) {
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) {
-        modal.style.display = "none";
-      }
-    });
-  }
-
-  // ============================================================
-  // 3. ANIMATION D'APPARITION AU SCROLL (SCROLL REVEAL)
-  // ============================================================
-
-  const revealElements = document.querySelectorAll(
-    '.text-block, .info-card, .formation-block, .ac-section-wrapper, .presentation-photo, .section h2, .pdf-wrapper, .competence-card, .lexique-card, .program-images, .dual-images, .section > p, .section > ul, .ac-separator'
-  );
-
-  const revealObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('active');
-        
-        // MODIFICATION ICI : On passe à 800ms pour correspondre au CSS
-        setTimeout(() => {
-          entry.target.classList.remove('reveal', 'active');
-        }, 800); // Délai augmenté pour laisser finir l'animation
-
-        observer.unobserve(entry.target);
-      }
-    });
-  }, {
-    root: null,
-    threshold: 0.1,
-    rootMargin: "0px"
-  });
-
-  revealElements.forEach(el => {
-    el.classList.add('reveal');
-    revealObserver.observe(el);
-  });
-
 });

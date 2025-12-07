@@ -20,7 +20,7 @@ body {
   padding-top: 70px; 
 }
 
-.container{
+.container {
   max-width:var(--container-max);
   margin:0 auto;
   padding:0 20px;
@@ -38,14 +38,14 @@ body {
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
-.header-inner{
+.header-inner {
   display:flex;
   align-items:center;
   justify-content:space-between;
   padding:12px 0;
 }
 
-.brand-link{
+.brand-link {
   font-weight:700;
   color:var(--dark);
   text-decoration:none;
@@ -54,7 +54,7 @@ body {
   letter-spacing: 1px;
 }
 
-.nav-toggle{
+.nav-toggle {
   display:none;
   background:none;
   border:none;
@@ -84,7 +84,7 @@ body {
   color: var(--accent);
 }
 
-.hero{
+.hero {
   display:flex;
   align-items:center;
   justify-content:center;
@@ -94,7 +94,9 @@ body {
   color:white;
 }
 
-.hero-inner{max-width:800px}
+.hero-inner {
+    max-width: 800px
+}
 
 .profile-pic {
   width: 150px;
@@ -114,13 +116,13 @@ body {
   border-color: white;
 }
 
-.subtitle{
+.subtitle {
   opacity:0.9;
   margin-top:10px;
   font-size: 1.1rem;
 }
 
-.btn{
+.btn {
   display:inline-block;
   padding:12px 24px;
   border-radius:50px;
@@ -132,14 +134,16 @@ body {
 
 .btn:hover{transform: scale(1.05);}
 
-.btn-primary{
+.btn-primary {
   background:white;
   color:var(--dark);
 }
 
-.section{padding:60px 0}
+.section {
+    padding: 60px 0
+}
 
-.section h2{
+.section h2 {
   margin:0 0 30px;
   padding-bottom:10px;
   border-bottom:3px solid var(--accent);
@@ -153,52 +157,10 @@ body {
     gap: 20px;
 }
 
-.text-block {
-    background: var(--card);
-    margin-top: 30px;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    border-left: 5px solid var(--accent); 
-}
-
-.text-block h3 {
-    margin-top: 0;
-    color: var(--accent);
-}
-
-.info-card {
-    background: var(--card);
-    padding: 20px;
-    border-radius: 12px;
-    border-left: 5px solid var(--accent);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-}
-
-.info-card h3 { margin-top: 0; font-size: 1.1rem; color: var(--accent); }
-
-.info-card ul { padding-left: 20px; margin-bottom: 0; }
-
 .documents-section {
     margin-top: 30px;
     padding-top: 0;
     border-top: none;
-}
-
-.pdf-wrapper {
-    background: white;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-    margin-bottom: 30px;
-    border-left: 5px solid var(--accent); 
-}
-
-.pdf-wrapper h4 {
-    margin-top: 0;
-    margin-bottom: 15px;
-    color: var(--accent);
-    font-size: 1.2rem;
 }
 
 object {
@@ -230,20 +192,12 @@ object {
     text-decoration: none;
 }
 
-.site-footer{background:var(--dark);color:white;padding:20px 0;text-align:center;margin-top:60px}
-
-.formation-block {
-    background: white;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    margin-bottom: 30px;
-    border-left: 5px solid var(--accent);
-}
-
-.formation-block h3 {
-    margin-top: 0;
-    color: var(--accent);
+.site-footer {
+    background: var(--dark);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 60px
 }
 
 figcaption {
@@ -268,39 +222,6 @@ figcaption {
     position: absolute;
     left: 0;
     font-weight: bold;
-}
-
-.lexique-card {
-    background: var(--dark);
-    color: white;
-    padding: 24px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-
-.lexique-card h3 {
-    color: white;
-    border-bottom: 1px solid rgba(255,255,255,0.2);
-    padding-bottom: 10px;
-}
-
-.lexique-card dl {
-    margin: 0;
-}
-
-.lexique-card dt {
-    font-weight: bold;
-    color: #4b6cb7;
-    color: #a3c9ff; 
-    margin-top: 15px;
-    font-size: 1.1rem;
-}
-
-.lexique-card dd {
-    margin-left: 0;
-    margin-bottom: 5px;
-    opacity: 0.9;
-    font-size: 0.95rem;
 }
 
 .competence-grid {
@@ -396,9 +317,7 @@ figcaption {
     transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s;
 }
 
-.program-images img:hover, 
-.referentiel-img img:hover, 
-.dual-images img:hover {
+.program-images img:hover, .referentiel-img img:hover, .dual-images img:hover {
     opacity: 1;
     transform: translateY(-5px) scale(1.02);
     box-shadow: 0 12px 24px rgba(0,0,0,0.15);
@@ -452,8 +371,7 @@ figcaption {
     transition: 0.3s;
 }
 
-.close-modal:hover,
-.close-modal:focus {
+.close-modal:hover, .close-modal:focus {
     color: var(--accent);
 }
 
@@ -464,12 +382,118 @@ figcaption {
   margin-top: 30px;
 }
 
-.text-block, 
-.info-card, 
-.formation-block, 
-.lexique-card, 
 .pdf-wrapper {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    margin-bottom: 30px;
+    border-left: 5px solid var(--accent);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pdf-wrapper h4 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: var(--accent);
+    font-size: 1.2rem;
+}
+
+.lexique-card {
+    background: var(--dark);
+    color: white;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lexique-card h3 {
+    color: white;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding-bottom: 10px;
+}
+
+.lexique-card dl {
+    margin: 0;
+}
+
+.lexique-card dt {
+    font-weight: bold;
+    color: #4b6cb7;
+    color: #a3c9ff; 
+    margin-top: 15px;
+    font-size: 1.1rem;
+}
+
+.lexique-card dd {
+    margin-left: 0;
+    margin-bottom: 5px;
+    opacity: 0.9;
+    font-size: 0.95rem;
+}
+
+.formation-block {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+    border-left: 5px solid var(--accent);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.formation-block h3 {
+    margin-top: 0;
+    color: var(--accent);
+}
+
+.info-card {
+    background: var(--card);
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 5px solid var(--accent);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card h3 { margin-top: 0; font-size: 1.1rem; color: var(--accent); }
+
+.info-card h4 {
+    margin-top: 0;
+    color: var(--muted);
+    font-size: 1rem;
+    text-transform: uppercase;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+}
+
+.info-card ul { padding-left: 20px; margin-bottom: 0; }
+
+.text-block {
+    background: var(--card);
+    margin-top: 30px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-left: 5px solid var(--accent);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.text-block h3 {
+    margin-top: 0;
+    color: var(--accent);
+}
+
+.text-block h4 {
+    margin-top: 0;
+    color: var(--muted);
+    font-size: 1rem;
+    text-transform: uppercase;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 8px;
+    margin-bottom: 12px;
 }
 
 .text-block:hover, 
@@ -544,16 +568,6 @@ figcaption {
 
 .ac-tag.tag-verifier {
     background: #27ae60;
-}
-
-.text-block h4, .info-card h4 {
-    margin-top: 0;
-    color: var(--muted);
-    font-size: 1rem;
-    text-transform: uppercase;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 8px;
-    margin-bottom: 12px;
 }
 
 .link {
@@ -654,10 +668,7 @@ figcaption {
 
 
 
-/* ---------- Responsive (Mobile & Tablette) ---------- */
 @media (max-width: 900px) {
-
-  /* 1. Header et Navigation Globale */
   .header-inner {
     flex-wrap: wrap;
   }
@@ -667,22 +678,22 @@ figcaption {
   }
 
   .main-nav {
-    display: none;       /* Géré par le JS */
+    display: none;
     width: 100%;
     margin-top: 15px;
     border-top: 1px solid #eee;
-    max-height: 80vh;    /* Si le menu est trop grand, on scroll dedans */
+    max-height: 80vh;
     overflow-y: auto;    
   }
 
   .main-nav > ul {
     flex-direction: column;
     gap: 0;
-    align-items: flex-start; /* Important : aligne tout à gauche */
+    align-items: flex-start;
   }
   
   .main-nav > ul > li {
-    width: 100%; /* Chaque lien prend toute la largeur */
+    width: 100%;
   }
 
   .main-nav > ul > li > a {
@@ -693,56 +704,40 @@ figcaption {
     justify-content: space-between;
   }
 
-  /* 2. CORRECTION CRUCIALE : Le Menu Déroulant sur Mobile */
-  /* On annule totalement le style "flottant" du bureau */
   .dropdown-menu {
-    position: static;    /* Plus de position absolue */
-    display: block;      /* Toujours visible dans la liste */
-    transform: none;     /* Plus de centrage */
-    box-shadow: none;    /* Plus d'ombre */
+    position: static;
+    display: block;
+    transform: none;
+    box-shadow: none;
     border-top: none;
     
-    min-width: 100%;     /* Prend toute la largeur */
+    min-width: 100%;
     width: 100%;
     margin: 0;
     
-    background-color: #f9f9f9; /* Fond gris clair pour distinguer */
-    border-left: 4px solid var(--accent); /* Petite barre bleue à gauche */
+    background-color: #f9f9f9;
+    border-left: 4px solid var(--accent);
   }
   
-  /* On désactive l'animation d'apparition sur mobile */
   .main-nav li:hover .dropdown-menu {
     animation: none;
   }
 
-  /* Style des liens du sous-menu sur mobile */
   .dropdown-menu a {
-    padding-left: 20px; /* Petit décalage pour montrer que c'est un sous-menu */
+    padding-left: 20px;
     font-size: 0.85rem;
     color: var(--muted);
   }
 
-  /* La flèche reste fixe */
   .arrow {
     transform: rotate(225deg);
     margin-right: 15px;
   }
 
-  /* 3. Ajustements des autres sections */
   .hero { padding: 40px 20px; }
   .presentation-grid { grid-template-columns: 1fr; }
   .presentation-top { grid-template-columns: 1fr; }
   .presentation-photo { height: 300px; }
-}
-
-
-@media (max-width: 800px) {
-    .presentation-top {
-        grid-template-columns: 1fr;
-    }
-    .presentation-photo {
-        height: 300px;
-    }
 }
 
 
