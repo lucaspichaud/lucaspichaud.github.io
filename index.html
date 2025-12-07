@@ -1,9 +1,235 @@
 <!DOCTYPE html>
-<html>
-    <head>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Portfolio - Lucas PICHAUD</title>
+    <link rel="stylesheet" href="portfolio.css" />
+    <script src="portfolio.js" defer></script>
+</head>
+<body>
 
-    </head>
-    <body>
-        
-    </body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="brand">
+                <a href="#hero" class="brand-link">Lucas PICHAUD</a>
+                <button id="nav-toggle" class="nav-toggle" aria-label="Ouvrir le menu">☰</button>
+            </div>
+            <nav id="main-nav" class="main-nav" aria-label="Navigation principale">
+                <ul>
+                    <li><a href="#presentation">Présentation Personnelle</a></li>
+                    <li><a href="#formation">Formation</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="hero">
+        <div class="container hero-inner">
+            <img src="photo.jpg" alt="Lucas Pichaud" class="profile-pic" onerror="this.style.display='none'" />
+            <h1>Lucas PICHAUD</h1>
+            <p class="subtitle">Étudiant en BUT GEII</p>
+            <a class="btn btn-primary" href="#presentation">Découvrir mon profil</a>
+        </div>
+    </section>
+
+    <main>
+        <section id="presentation" class="section container">
+            <h2>Présentation personnelle</h2>
+
+            <div class="presentation-grid">
+                <article class="text-block">
+                    <h3>Mon Profil</h3>
+                    <p>
+                        Bienvenue sur mon portfolio. Je suis actuellement étudiant en première année de BUT GEII.
+                        j'ai choisi cette formation car j'ai une passion pour l'informatique et l'électronique, 
+                        ainsi qu'un goût pour la réalisation concrète.
+                        <br><br>
+                        Cette première année confirme mon choix : je m'épanouis dans l'ensemble des enseignements, 
+                        que ce soit en électricité, en informatique ou en automatisme. J'apprécie particulièrement 
+                        les approches pratiques.
+                    </p>
+                </article>
+
+                <div class="info-stack">
+                    <article class="info-card">
+                        <h3>Centres d'intérêt</h3>
+                        <ul>
+                            <li>Informatique</li>
+                            <li>Électronique</li>
+                            <li>Pratique de la course à pied depuis 2014</li>
+                            <li>Travaux manuels</li>
+                        </ul>
+                    </article>
+
+                    <article class="info-card">
+                        <h3>Formation, Diplôme et Certification</h3>
+                        <ul>
+                            <li>BUT GEII (En cours)</li>
+                            <li>Baccalauréat Général (Spécialités Mathématiques/Numérique et Sciences Informatiques)</li>
+                            <li>Certification PIX (500 pix / 896 pix)</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+
+            <div class="documents-section">
+                <div class="pdf-wrapper">
+                    <h4>Curriculum Vitae</h4>
+                    <object data="cv.pdf" type="application/pdf" width="100%" height="600px">
+                        <p>Votre navigateur ne peut pas afficher le PDF directement. 
+                        <a href="cv.pdf" class="btn btn-primary">Télécharger le CV</a></p>
+                    </object>
+                </div>
+
+                <div class="pdf-wrapper">
+                    <h4>Lettre de Motivation</h4>
+                    <object data="lettre_de_motivation.pdf" type="application/pdf" width="100%" height="600px">
+                        <p>Votre navigateur ne peut pas afficher le PDF directement. 
+                        <a href="lettre_de_motivation.pdf" class="btn btn-primary">Télécharger la lettre</a></p>
+                    </object>
+                </div>
+            </div>
+        </section>
+
+        <section id="formation" class="section container">
+            <h2>Ma Formation : BUT GEII</h2>
+            
+            <article class="formation-block">
+                <h3>Le BUT GEII</h3>
+                <p>
+                    Je prépare actuellement un BUT en GEII. Cette formation vise à former des techniciens
+                    supérieurs capables d'intervenir sur des systèmes électriques, électroniques et automatisés.
+                    Elle repose sur une approche par compétences et par des projets techniques concrets.
+                </p>
+            </article>
+
+            <article class="formation-block">
+                <h3>Les Compétences du BUT GEII</h3>
+                <p>
+                    La formation GEII repose sur plusieurs compétences principales évaluées tout au long du BUT. 
+                    Les deux compétences majeures développées en début de formation sont :
+                </p>
+
+                <ul class="competence-grid">
+                    <li class="competence-card">
+                        <div class="comp-content">
+                            <strong>CONCEVOIR</strong>
+                            <p>Capacité à imaginer, proposer et réaliser une solution technique adaptée pour répondre à un besoin précis.</p>
+                        </div>
+                    </li>
+                    
+                    <li class="competence-card">
+                        <div class="comp-content">
+                            <strong>VÉRIFIER</strong>
+                            <p>Capacité à tester, mesurer, analyser et valider le bon fonctionnement et les performances d'un système.</p>
+                        </div>
+                    </li>
+                </ul>
+
+                <p>
+                    Ces compétences sont développées concrètement grâce à des travaux pratiques, des projets et des situations professionnelles (SAÉ).
+                </p>
+                
+                <div class="program-images">
+                    <figure>
+                        <img src="extrait_programme_national_1.png" alt="Extrait du programme national 1" loading="lazy">
+                        <figcaption>Extrait n°1 : Vue d'ensemble des compétences</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="extrait_programme_national_2.png" alt="Extrait du programme national 2" loading="lazy">
+                        <figcaption>Extrait n°2 : Les niveaux attendus de développement des compétences</figcaption>
+                    </figure>
+                </div>
+            </article>
+
+            <article class="formation-block">
+                <h3>Apprentissages Critiques</h3>
+                <p>
+                    Les apprentissages critiques sont des critères observables définis pour attester 
+                    du niveau de développement des compétences. En première année, ils permettent d'apprendre à :
+                </p>
+
+                <ul class="ac-list">
+                    <li>Produire une analyse fonctionnelle d'un système simple.</li>
+                    <li>Réaliser un prototype pour des solutions techniques (matériel et/ou logiciel).</li>
+                    <li>Rédiger un dossier de fabrication à partir d'un dossier de conception.</li>
+                    <li>Appliquer une procédure d'essais.</li>
+                    <li>Identifier un dysfonctionnement.</li>
+                    <li>Décrire les effets d'un dysfonctionnement.</li>
+                </ul>
+
+                <p>
+                    Ces apprentissages sont évalués en continu lors des travaux pratiques et des projets.
+                </p>
+                
+                <div class="dual-images">
+                    <figure>
+                        <img src="extrait_referentiel_evaluation_concevoir.png" alt="Extrait référentiel 1" loading="lazy">
+                        <figcaption>Extrait du référentiel d'évaluation des compétences Concevoir</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="extrait_referentiel_evaluation_verifier.png" alt="Extrait référentiel 2" loading="lazy">
+                        <figcaption>Extrait du référentiel d'évaluation des compétences Vérifier</figcaption>
+                    </figure>
+                </div>
+            </article>
+
+            <div class="grid-2">
+                <article class="info-card">
+                    <h3>Mes Objectifs de 1ère Année</h3>
+                    <ul class="check-list">
+                        <li>Maitriser tous les apprentissages critiques de la première année.</li>
+                        <li>Travailler efficacement en équipe.</li>
+                        <li>Développer mon esprit d'analyse.</li>
+                        <li>Développer mon autonomie dans la gestion de projet (SAÉ).</li>
+                    </ul>
+                </article>
+
+                <article class="lexique-card">
+                    <h3>Lexique de la formation</h3>
+                    <dl>
+                        <dt>BUT</dt>
+                        <dd>Bachelor Universitaire de Technologie.</dd>
+                        
+                        <dt>GEII</dt>
+                        <dd>Génie Électrique et Informatique Industrielle.</dd>
+                        
+                        <dt>SAÉ</dt>
+                        <dd>Situation d'Apprentissage et d'Évaluation : Projets concrets.</dd>
+                        
+                        <dt>AC</dt>
+                        <dd>Apprentissage Critique : Critère d'évaluation d'une compétence.</dd>
+                        
+                        <dt>Compétence</dt>
+                        <dd>Combinaison d'un savoir, un savoir-être et un savoir-faire dans un contexte professionnel.<br>
+                            Une compétence est un « savoir-agir complexe, prenant appui sur la mobilisation et la combinaison efficaces 
+                            d'une variété de ressources à l'intérieur d'une famille de situations » (Tardif, 2006).
+                        </dd>
+                    </dl>
+                </article>
+            </div>
+            
+            <div id="projects" class="project-list"></div>
+        </section>
+
+        <section id="contact" class="section container">
+            <h2>Contact</h2>
+            <p>N'hésitez pas à me contacter par email : <a href="mailto:lucaspichaudpro@gmail.com">lucaspichaudpro@gmail.com</a></p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>© 2025 Lucas PICHAUD — Portfolio BUT GEII</p>
+        </div>
+    </footer>
+
+    <div id="zoom-modal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="img-to-zoom">
+        <div id="caption"></div>
+    </div>
+</body>
 </html>
