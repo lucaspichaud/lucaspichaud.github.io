@@ -138,14 +138,6 @@ body {
   color: var(--dark);
 }
 
-/* ---------- Section Présentation (Nouveau) ---------- */
-.presentation-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr; /* Le texte prend plus de place que les infos */
-    gap: 30px;
-    margin-bottom: 40px;
-}
-
 .info-stack {
     display: flex;
     flex-direction: column;
@@ -170,7 +162,6 @@ body {
     background: var(--card);
     padding: 20px;
     border-radius: 12px;
-    /* La barre bleue était déjà là, mais on s'assure qu'elle est bien définie */
     border-left: 5px solid var(--accent);
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
@@ -179,9 +170,9 @@ body {
 .info-card ul { padding-left: 20px; margin-bottom: 0; }
 
 .documents-section {
-    margin-top: 0;          /* On remet à 0 (l'espace sera géré par le bloc précédent) */
-    padding-top: 0;         /* Plus de padding */
-    border-top: none;       /* On supprime la ligne grise horizontale */
+    margin-top: 40px;       /* C'est cet espace qui manquait */
+    padding-top: 0;
+    border-top: none;
 }
 
 .pdf-wrapper {
@@ -233,7 +224,6 @@ object {
 
 /* ---------- Responsive ---------- */
 @media (max-width: 900px){
-  .presentation-grid { grid-template-columns: 1fr; }
   .main-nav{display:none} /* Géré par JS plus tard si activé */
   .nav-toggle{display:inline-block}
   .hero{padding:40px 20px}
@@ -511,5 +501,71 @@ figcaption {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
-  margin-top: 50px;
+  margin-top: 30px;
+}
+
+/* --- Animation globale sur tous les blocs de contenu --- */
+
+/* 1. On prépare l'animation fluide sur toutes les cartes */
+.text-block, 
+.info-card, 
+.formation-block, 
+.lexique-card, 
+.pdf-wrapper {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 2. L'effet au survol : le bloc remonte et l'ombre se creuse */
+.text-block:hover, 
+.info-card:hover, 
+.formation-block:hover, 
+.lexique-card:hover, 
+.pdf-wrapper:hover {
+    transform: translateY(-5px);       /* Le bloc monte de 5 pixels */
+    box-shadow: 0 12px 24px rgba(0,0,0,0.12); /* L'ombre devient plus douce et profonde */
+}
+
+
+/* --- Styles pour la nouvelle mise en page Présentation --- */
+
+.presentation-top {
+    display: grid;
+    grid-template-columns: 3fr 2fr; /* Le texte prend plus de place que la photo */
+    gap: 30px;
+    margin-bottom: 30px;
+    align-items: stretch; /* Les deux blocs auront la même hauteur */
+}
+
+.presentation-photo {
+    position: relative;
+    height: 100%;
+    overflow: hidden; /* Pour que l'image ne dépasse pas des bords arrondis */
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    
+    /* Animation au survol (la même que les autres) */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.presentation-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* L'image remplit tout l'espace sans être déformée */
+    display: block;
+}
+
+/* Effet interactif sur la photo */
+.presentation-photo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+/* Responsive : Sur mobile, la photo passe en dessous du texte */
+@media (max-width: 800px) {
+    .presentation-top {
+        grid-template-columns: 1fr;
+    }
+    .presentation-photo {
+        height: 300px; /* On fixe une hauteur max sur mobile */
+    }
 }
