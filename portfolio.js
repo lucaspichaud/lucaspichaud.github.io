@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Toggle pour le menu mobile
   const navToggle = document.getElementById('nav-toggle');
   const mainNav = document.getElementById('main-nav');
-  
+
   if (navToggle && mainNav) {
     navToggle.addEventListener('click', () => {
       mainNav.style.display = mainNav.style.display === 'block' ? '' : 'block';
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ============================================================
   // 2. GESTION DU ZOOM IMAGE (LIGHTBOX)
   // ============================================================
-  
+
   const modal = document.getElementById("zoom-modal");
   const modalImg = document.getElementById("img-to-zoom");
   const captionText = document.getElementById("caption");
@@ -73,9 +73,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // On essaie de récupérer la légende (figcaption) ou le texte alternatif (alt)
         const figcaption = this.nextElementSibling; 
         if (figcaption && figcaption.tagName === 'FIGCAPTION') {
-             captionText.innerHTML = figcaption.innerHTML;
+              captionText.innerHTML = figcaption.innerHTML;
         } else {
-             captionText.innerHTML = this.alt;
+              captionText.innerHTML = this.alt;
         }
       }
     });
@@ -96,5 +96,37 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // ============================================================
+  // 3. ANIMATION D'APPARITION AU SCROLL (SCROLL REVEAL)
+  // ============================================================
+
+  const revealElements = document.querySelectorAll(
+    '.text-block, .info-card, .formation-block, .ac-section-wrapper, .presentation-photo, .section h2, .pdf-wrapper, .competence-card, .lexique-card, .program-images, .dual-images, .section > p, .section > ul, .ac-separator'
+  );
+
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        
+        // MODIFICATION ICI : On passe à 800ms pour correspondre au CSS
+        setTimeout(() => {
+          entry.target.classList.remove('reveal', 'active');
+        }, 800); // Délai augmenté pour laisser finir l'animation
+
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    root: null,
+    threshold: 0.1,
+    rootMargin: "0px"
+  });
+
+  revealElements.forEach(el => {
+    el.classList.add('reveal');
+    revealObserver.observe(el);
+  });
 
 });
