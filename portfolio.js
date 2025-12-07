@@ -50,28 +50,22 @@ document.addEventListener('DOMContentLoaded', () => {
     if (window.innerWidth <= 900 && mainNav) mainNav.style.display = '';
   }
 
-// ============================================================
-  // GESTION DU SOUS-MENU MOBILE (Clic sur la flèche uniquement)
+  // ============================================================
+  // GESTION DU SOUS-MENU MOBILE (Dropdown Click)
   // ============================================================
   
-  // On cible uniquement les flèches dans les éléments qui ont un menu
-  const menuArrows = document.querySelectorAll('.has-dropdown .arrow');
+  const dropdownToggles = document.querySelectorAll('.has-dropdown > a');
 
-  menuArrows.forEach(arrow => {
-    arrow.addEventListener('click', (e) => {
-      // On vérifie si on est sur mobile
+  dropdownToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      // On vérifie si on est sur mobile (largeur écran <= 900px)
       if (window.innerWidth <= 900) {
-        
-        // 1. IMPORTANT : On empêche le lien parent (<a>) de s'activer
+        // Empêche le lien de nous emmener ailleurs tout de suite
         e.preventDefault();
-        // 2. On empêche le clic de remonter (bubbling)
-        e.stopPropagation();
         
-        // 3. On récupère le parent <li> (l'élément de liste)
-        const listItem = arrow.closest('li');
-        
-        // 4. On bascule la classe active
-        listItem.classList.toggle('active');
+        // On bascule la classe 'active' sur le parent <li>
+        // Cela va déclencher le display: block du CSS
+        toggle.parentElement.classList.toggle('active');
       }
     });
   });

@@ -572,22 +572,14 @@ figcaption {
 
 .arrow {
     display: inline-block;
-    width: 10px;           /* Un peu plus large pour la visibilité */
-    height: 10px;
+    width: 8px;
+    height: 8px;
     border-right: 2px solid currentColor;
     border-bottom: 2px solid currentColor;
     transform: rotate(45deg);
-    
-    margin-left: 15px;    /* Espace par rapport au texte */
+    margin-left: 10px;
     margin-bottom: 3px;
-    
-    /* AJOUT : Zone de clic agrandie (padding) pour le confort tactile */
-    padding: 5px;         
-    /* On décale les bordures pour que le padding ne déforme pas le dessin */
-    background-clip: content-box; 
-    
-    transition: transform 0.3s ease;
-    cursor: pointer;      /* Indique qu'on peut cliquer dessus */
+    transition: transform 0.3s ease, margin 0.3s ease;
 }
 
 .main-nav li:hover .arrow {
@@ -679,18 +671,18 @@ figcaption {
     width: 100%;
     margin-top: 15px;
     border-top: 1px solid #eee;
-    max-height: 80vh;    
+    max-height: 80vh;    /* Si le menu est trop grand, on scroll dedans */
     overflow-y: auto;    
   }
 
   .main-nav > ul {
     flex-direction: column;
     gap: 0;
-    align-items: flex-start;
+    align-items: flex-start; /* Important : aligne tout à gauche */
   }
   
   .main-nav > ul > li {
-    width: 100%;
+    width: 100%; /* Chaque lien prend toute la largeur */
   }
 
   .main-nav > ul > li > a {
@@ -699,57 +691,44 @@ figcaption {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    cursor: pointer; /* Indique qu'on peut cliquer */
   }
 
-  /* 2. Menu Déroulant sur Mobile */
+  /* 2. CORRECTION CRUCIALE : Le Menu Déroulant sur Mobile */
+  /* On annule totalement le style "flottant" du bureau */
   .dropdown-menu {
-    position: static;
-    
-    /* MODIFICATION ICI : On le cache par défaut */
-    display: none;      
-    
-    transform: none;
-    box-shadow: none;
+    position: static;    /* Plus de position absolue */
+    display: block;      /* Toujours visible dans la liste */
+    transform: none;     /* Plus de centrage */
+    box-shadow: none;    /* Plus d'ombre */
     border-top: none;
-    min-width: 100%;
+    
+    min-width: 100%;     /* Prend toute la largeur */
     width: 100%;
     margin: 0;
-    background-color: #f9f9f9;
-    border-left: 4px solid var(--accent);
+    
+    background-color: #f9f9f9; /* Fond gris clair pour distinguer */
+    border-left: 4px solid var(--accent); /* Petite barre bleue à gauche */
   }
   
-  /* Désactive l'animation hover sur mobile */
+  /* On désactive l'animation d'apparition sur mobile */
   .main-nav li:hover .dropdown-menu {
     animation: none;
-    /* IMPORTANT : On empêche le hover CSS d'ouvrir le menu sur mobile */
-    display: none; 
   }
 
-  /* 3. NOUVEAU : On l'affiche seulement si la classe 'active' est ajoutée par le JS */
-  .has-dropdown.active .dropdown-menu {
-    display: block;
-    animation: fadeIn 0.3s ease;
-  }
-
-  /* Rotation de la flèche quand ouvert */
-  .has-dropdown.active .arrow {
-    transform: rotate(225deg);
-  }
-  
-  /* Flèche par défaut vers le bas */
-  .arrow {
-    transform: rotate(45deg); 
-    margin-right: 15px;
-  }
-
+  /* Style des liens du sous-menu sur mobile */
   .dropdown-menu a {
-    padding-left: 20px;
+    padding-left: 20px; /* Petit décalage pour montrer que c'est un sous-menu */
     font-size: 0.85rem;
     color: var(--muted);
   }
 
-  /* Ajustements autres */
+  /* La flèche reste fixe */
+  .arrow {
+    transform: rotate(225deg);
+    margin-right: 15px;
+  }
+
+  /* 3. Ajustements des autres sections */
   .hero { padding: 40px 20px; }
   .presentation-grid { grid-template-columns: 1fr; }
   .presentation-top { grid-template-columns: 1fr; }
