@@ -58,8 +58,9 @@
                 <article class="text-block">
                     <h3>Mon Profil</h3>
                     <p>
-                        Bienvenue sur mon portfolio. J'ai été au lycée Galilée à Cergy (95) et j'ai fait un Bac Général.
-                        Je suis actuellement étudiant en première année de BUT GEII.
+                        Bienvenue sur mon portfolio. 
+                        Je suis actuellement étudiant en première année de BUT GEII. 
+                        J'ai été au lycée Galilée à Cergy (95) et j'ai fait un Bac Général. 
                         J'ai choisi cette formation car j'ai une passion pour l'informatique et l'électronique, 
                         ainsi qu'un goût pour la réalisation concrète.
                         <br><br>
@@ -266,39 +267,116 @@
 
                 <article class="trace-block">
                     <div class="trace-header">
-                        <h4>Nom de la trace : [Titre, ex: Schéma fonctionnel du Robot]</h4>
+                        <h4>Analyse des blocs fonctionnels (SAÉ Alimentation)</h4>
+                        <span class="trace-date">novembre 2025</span>
                     </div>
                     
                     <div class="grid-2 trace-content">
                         <div class="trace-text">
                             <div class="trace-field">
                                 <strong>Que montre la trace ?</strong>
-                                <p><em>[Décrire factuellement ce que l'on voit sur le document...]</em></p>
+                                <p>L'identification des différents étages du circuit : transformateur (abaisseur), pont de diodes (redresseur), condensateurs (lissage) et LM317 (régulation).</p>
                             </div>
                             
                             <div class="trace-field">
                                 <strong>Commentaire</strong>
-                                <p><em>[Expliquer le contexte, les choix techniques, la démarche rigoureuse...]</em></p>
+                                <p>Cette décomposition montre la compréhension du rôle de chaque composant dans la chaîne de conversion d'énergie, passant du 230V alternatif à une tension continue stable.</p>
                             </div>
                             
                             <div class="trace-field">
                                 <strong>Texte Réflexif</strong>
-                                <p><em>[Analyse personnelle : Ce que j'ai appris, les difficultés surmontées, mon ressenti...]</em></p>
+                                <p>J'ai appris à ne pas voir un circuit comme un simple amas de composants, mais comme une suite logique de fonctions. Identifier le rôle de chaque bloc (redresser, lisser, réguler) m'a permis de mieux comprendre le fonctionnement global de l'alimentation.</p>
+                            </div>
+                        </div>
+
+                        <div class="trace-media">
+                            <object data="analyse_des_blocs_fonctionnels_sae_alimentation.pdf" type="application/pdf" width="100%" height="500px" class="trace-pdf-viewer">
+                                <div class="pdf-fallback-msg">
+                                    <p>Votre navigateur ne peut pas afficher ce PDF.</p>
+                                    <a href="analyse_des_blocs_fonctionnels_sae_alimentation.pdf" class="btn btn-primary">Télécharger le fichier</a>
+                                </div>
+                            </object>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="trace-block">
+                    <div class="trace-header">
+                        <h4>Définition des variables et formules (SAÉ Voltmètre)</h4>
+                        <span class="trace-date">décembre 2025</span>
+                    </div>
+                    
+                    <div class="grid-2 trace-content">
+                        <div class="trace-text">
+                            <div class="trace-field">
+                                <strong>Que montre la trace ?</strong>
+                                <p>Cette trace présente la liste des variables (tensionInstantanee, Vmoy, Veff) et les formules mathématiques associées définies avant le codage.</p>
+                            </div>
+                            
+                            <div class="trace-field">
+                                <strong>Commentaire</strong>
+                                <p>L'analyse fonctionnelle nécessite de traduire des grandeurs physiques (Tension efficace, Fréquence) en objets informatiques exploitables (tableaux d'échantillons, types float/int) pour préparer le traitement du signal.</p>
+                            </div>
+                            
+                            <div class="trace-field">
+                                <strong>Texte Réflexif</strong>
+                                <p>J'ai compris que l'analyse fonctionnelle est le pont entre la physique et l'informatique. Avant d'écrire la moindre ligne de code, j'ai dû définir précisément ce que je voulais mesurer (valeur efficace, moyenne) pour structurer mes variables correctement.</p>
+                            </div>
+                        </div>
+
+                        <div class="trace-media">
+                            <object data="definition_des_variables_et_formules_sae_voltmetre.pdf" type="application/pdf" width="100%" height="500px" class="trace-pdf-viewer">
+                                <div class="pdf-fallback-msg">
+                                    <p>Votre navigateur ne peut pas afficher ce PDF.</p>
+                                    <a href="definition_des_variables_et_formules_sae_voltmetre.pdf" class="btn btn-primary">Télécharger le fichier</a>
+                                </div>
+                            </object>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="trace-block">
+                    <div class="trace-header">
+                        <h4>Schéma Logique de Navigation (SAÉ Voltmètre)</h4>
+                        <span class="trace-date">décembre 2025</span>
+                    </div>
+                    
+                    <div class="grid-2 trace-content">
+                        <div class="trace-text">
+                            <div class="trace-field">
+                                <strong>Que montre la trace ?</strong>
+                                <p>Le diagramme de la gestion des pages via le bouton poussoir.</p>
+                            </div>
+                            
+                            <div class="trace-field">
+                                <strong>Commentaire</strong>
+                                <p>Cette trace illustre la conception de l'interface utilisateur. Elle montre comment le système réagit aux actions de l'utilisateur (appui bouton) pour modifier l'affichage selon le cahier des charges.</p>
+                            </div>
+                            
+                            <div class="trace-field">
+                                <strong>Texte Réflexif</strong>
+                                <p>Concevoir ne se limite pas aux calculs internes. J'ai dû penser à l'expérience utilisateur en créant une navigation fluide par pages, ce qui m'a obligé à anticiper la gestion des états du système dans mon programme.</p>
                             </div>
                         </div>
 
                         <div class="trace-media">
                             <figure>
-                                <img src="image_placeholder.jpg" alt="Visuel de la trace" loading="lazy"> 
-                                <figcaption>Fichier associé : <a href="#" class="link">Télécharger le PDF</a></figcaption>
+                                <img src="schema_logique_de_navigation_sae_voltmetre.png" alt="Visuel de la trace" loading="lazy">
                             </figure>
                         </div>
                     </div>
                 </article>
 
                 <article class="text-block" style="margin-top: 20px;">
-                    <h4>Bilan de l'apprentissage</h4>
-                    <p><em>[Conclusion générale : Ai-je atteint le niveau attendu pour cet apprentissage critique ?]</em></p>
+                    <h4>Bilan de l'apprentissage au semestre 1</h4>
+                    <p><strong>CONCEVOIR : Produire une analyse fonctionnelle d'un système simple</strong><br><br>
+
+                    Au cours de ce semestre, j'ai compris que la conception est l'étape clé qui précède toute réalisation technique.
+                    <ul>
+                        <li>Approche système : À travers la SAÉ Alimentation, j'ai appris à décomposer un circuit électronique en blocs fonctionnels (redresser, réguler) pour en maîtriser les flux d'énergie.</li>
+                        <li>Modélisation logicielle : Avec le projet Voltmètre, j'ai acquis la capacité de structurer mon programme en amont, en définissant les variables et la navigation utilisateur avant d'écrire le code.</li>
+                    </ul>
+                    En synthèse, je suis capable de formaliser le fonctionnement d'un système simple (matériel ou logiciel) pour en sécuriser la fabrication.</p>
                 </article>
             </div>
 
@@ -312,36 +390,106 @@
 
                 <article class="trace-block">
                     <div class="trace-header">
-                        <h4>Nom de la trace : [Ex: Schéma d'implantation Carte Alim]</h4>
+                        <h4>Photo de la carte soudée (SAÉ GBF)</h4>
+                        <span class="trace-date">septembre 2025</span>
                     </div>
                     
                     <div class="grid-2 trace-content">
                         <div class="trace-text">
                             <div class="trace-field">
                                 <strong>Que montre la trace ?</strong>
-                                <p><em>[Ex: Cette photo montre le travail préalable de placement des composants...]</em></p>
+                                <p>Une vue rapprochée des soudures des composants sur le circuit imprimé du générateur de fonctions.</p>
                             </div>
                             <div class="trace-field">
                                 <strong>Commentaire</strong>
-                                <p><em>[Ex: L'utilisation du code couleur normalisé facilite la lecture...]</em></p>
+                                <p>Cette trace atteste de la maîtrise du geste technique (soudure) et du respect de l'implantation physique des composants pour obtenir un prototype fonctionnel.</p>
                             </div>
                             <div class="trace-field">
                                 <strong>Texte Réflexif</strong>
-                                <p><em>[Ex: J'ai pris du temps pour le schéma mais cela m'a évité des erreurs au soudage...]</em></p>
+                                <p>Passer de la théorie à la pratique demande de la dextérité. Cette réalisation m'a appris l'importance de la précision du geste : une soudure propre est la première garantie d'un prototype qui fonctionne.</p>
                             </div>
                         </div>
                         <div class="trace-media">
                             <figure>
-                                <img src="image_placeholder.jpg" alt="Photo du prototype" loading="lazy">
-                                <figcaption>Document : <a href="#" class="link">Voir le schéma</a></figcaption>
+                                <img src="photo_de_la_carte_soudee_sae_gbf.png" alt="Visuel de la trace" loading="lazy">
                             </figure>
                         </div>
                     </div>
                 </article>
 
+                <article class="trace-block">
+                    <div class="trace-header">
+                        <h4>Photo de la plaque à pastilles (SAÉ Alimentation)</h4>
+                        <span class="trace-date">novembre 2025</span>
+                    </div>
+                    
+                    <div class="grid-2 trace-content">
+                        <div class="trace-text">
+                            <div class="trace-field">
+                                <strong>Que montre la trace ?</strong>
+                                <p>L'assemblage physique des composants sur une plaque à pastilles, respectant le schéma électrique.</p>
+                            </div>
+                            <div class="trace-field">
+                                <strong>Commentaire</strong>
+                                <p>Contrairement au kit GBF, cette trace montre la capacité à créer ses propres pistes et à agencer les composants manuellement sur une carte de prototypage brute.</p>
+                            </div>
+                            <div class="trace-field">
+                                <strong>Texte Réflexif</strong>
+                                <p>Réaliser ce prototype m'a confronté aux contraintes d'espace. J'ai dû traduire un schéma électrique abstrait en une disposition physique concrète, en gérant l'encombrement des gros composants comme le transformateur ou le condensateur de filtrage.</p>
+                            </div>
+                        </div>
+                        <div class="trace-media">
+                            <figure>
+                                <img src="photo_de_la_carte_a_pastilles_sae_alimentation.jpg" alt="Visuel de la trace" loading="lazy">
+                            </figure>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="trace-block">
+                    <div class="trace-header">
+                        <h4>Code C structuré (SAÉ Voltmètre)</h4>
+                        <span class="trace-date">décembre 2025</span>
+                    </div>
+                    
+                    <div class="grid-2 trace-content">
+                        <div class="trace-text">
+                            <div class="trace-field">
+                                <strong>Que montre la trace ?</strong>
+                                <p>Un extrait du programme Arduino montrant l'utilisation de fonctions dédiées (calculerVoltmetre(), calculerFrequence()) et de boucles logiques.</p>
+                            </div>
+                            <div class="trace-field">
+                                <strong>Commentaire</strong>
+                                <p>Le prototype est ici logiciel. La trace montre la transformation des algorithmes de calcul en code C compilable et téléversable dans le microcontrôleur.</p>
+                            </div>
+                            <div class="trace-field">
+                                <strong>Texte Réflexif</strong>
+                                <p>J'ai réalisé que la qualité d'un prototype logiciel passe par sa structure. Découper mon code en fonctions distinctes a rendu mon programme lisible et fonctionnel, transformant des formules mathématiques en un outil de mesure temps réel.</p>
+                            </div>
+                        </div>
+                        <div class="trace-media">
+                            <object data="code_c_structure_sae_voltmetre.pdf" type="application/pdf" width="100%" height="500px" class="trace-pdf-viewer">
+                                <div class="pdf-fallback-msg">
+                                    <p>Votre navigateur ne peut pas afficher ce PDF.</p>
+                                    <a href="code_c_structure_sae_voltmetre.pdf" class="btn btn-primary">Télécharger le fichier</a>
+                                </div>
+                            </object>
+                        </div>
+                    </div>
+                </article>
+
                 <article class="text-block" style="margin-top: 20px;">
-                    <h4>Bilan de l'apprentissage</h4>
-                    <p><em>[À COMPLÉTER]</em></p>
+                    <h4>Bilan de l'apprentissage au semestre 1</h4>
+                    <p><strong>CONCEVOIR : Réaliser un prototype pour des solutions techniques</strong><br><br>
+                    
+                    Ce semestre m'a permis de développer les savoir-faire techniques indispensables pour passer du schéma théorique à l'objet fonctionnel.
+                    <ul>
+                        <li>Réalisation Matérielle : À travers les SAÉ GBF et Alimentation, j'ai acquis la dextérité nécessaire pour l'assemblage électronique. 
+                            J'ai appris à maîtriser la soudure ainsi que l'agencement complexe des composants sur plaque à pastilles, en gérant les contraintes d'encombrement physique.</li>
+                        <li>Implémentation Logicielle : Avec le projet Voltmètre, j'ai compris qu'un prototype logiciel doit être structuré pour être viable. 
+                            J'ai appris à traduire des algorithmes mathématiques en un code C.</li>
+                    </ul>
+                    En synthèse, je suis désormais capable de produire des prototypes complets, alliant une construction mécanique robuste à une architecture logicielle fonctionnelle.</p>
                 </article>
             </div>
 
@@ -355,36 +503,77 @@
 
                 <article class="trace-block">
                     <div class="trace-header">
-                        <h4>Nom de la trace : [Ex: Dossier SAÉ Arduino]</h4>
+                        <h4>Plan d'implantation sur grille (SAÉ Alimentation)</h4>
+                        <span class="trace-date">novembre 2025</span>
                     </div>
                     
                     <div class="grid-2 trace-content">
                         <div class="trace-text">
                             <div class="trace-field">
                                 <strong>Que montre la trace ?</strong>
-                                <p><em>[Le sommaire du compte-rendu technique...]</em></p>
+                                <p>Le dessin préparatoire sur papier quadrillé positionnant chaque composant et chaque liaison avant la soudure.</p>
                             </div>
                             <div class="trace-field">
                                 <strong>Commentaire</strong>
-                                <p><em>[Il est crucial de documenter les algorithmes et variables...]</em></p>
+                                <p>Ce document est essentiel pour la fabrication. Il permet d'anticiper les problèmes de croisement de pistes et sert de guide lors de l'assemblage.</p>
                             </div>
                             <div class="trace-field">
                                 <strong>Texte Réflexif</strong>
-                                <p><em>[Au début je ne voyais pas l'utilité, mais cela aide au débogage...]</em></p>
+                                <p>J'ai compris que la fabrication se gagne à la préparation. Ce plan d'implantation m'a fait gagner un temps précieux lors de la soudure et a permis d'éviter les erreurs de câblage irréversibles.</p>
                             </div>
                         </div>
                         <div class="trace-media">
                             <figure>
-                                <img src="image_placeholder.jpg" alt="Aperçu du dossier" loading="lazy">
-                                <figcaption>Fichier : <a href="#" class="link">Télécharger le Dossier</a></figcaption>
+                                <img src="plan_d_implantation_sur_grille_sae_alimentation.jpg" alt="Visuel de la trace" loading="lazy">
                             </figure>
                         </div>
                     </div>
                 </article>
 
+                <article class="trace-block">
+                    <div class="trace-header">
+                        <h4>Nomenclature détaillée (SAÉ Alimentation)</h4>
+                        <span class="trace-date">novembre 2025</span>
+                    </div>
+                    
+                    <div class="grid-2 trace-content">
+                        <div class="trace-text">
+                            <div class="trace-field">
+                                <strong>Que montre la trace ?</strong>
+                                <p>Le tableau listant les composants avec leurs valeurs et les références fournisseurs précises.</p>
+                            </div>
+                            <div class="trace-field">
+                                <strong>Commentaire</strong>
+                                <p>Cette trace prouve la capacité à spécifier le matériel nécessaire à la reproduction du système, en utilisant des références industrielles réelles issues de datasheets.</p>
+                            </div>
+                            <div class="trace-field">
+                                <strong>Texte Réflexif</strong>
+                                <p>Un bon dossier de fabrication doit permettre l'approvisionnement. J'ai appris à fouiller les documentations techniques pour sélectionner les composants exacts adaptés aux besoins du projet.</p>
+                            </div>
+                        </div>
+                        <div class="trace-media">
+                            <object data="nomenclature_detaillee_sae_alimentation.pdf" type="application/pdf" width="100%" height="500px" class="trace-pdf-viewer">
+                                <div class="pdf-fallback-msg">
+                                    <p>Votre navigateur ne peut pas afficher ce PDF.</p>
+                                    <a href="nomenclature_detaillee_sae_alimentation.pdf" class="btn btn-primary">Télécharger le fichier</a>
+                                </div>
+                            </object>
+                        </div>
+                    </div>
+                </article>
+
                 <article class="text-block" style="margin-top: 20px;">
-                    <h4>Bilan de l'apprentissage</h4>
-                    <p><em>[À COMPLÉTER]</em></p>
+                    <h4>Bilan de l'apprentissage au semestre 1</h4>
+                    <p><strong>CONCEVOIR : Rédiger un dossier de fabrication</strong><br><br>
+                    
+                    Ce semestre m'a enseigné que la réussite d'une réalisation technique ne dépend pas uniquement du schéma électrique, mais de la qualité de sa documentation préparatoire.
+                    <ul>
+                        <li>Planification spatiale : Avec la réalisation du plan d'implantation sur grille, j'ai appris à anticiper les contraintes physiques du circuit. 
+                            J'ai compris que ce document est un guide indispensable pour rationaliser le câblage et éviter les erreurs irréversibles lors de la soudure.</li>
+                        <li>Spécification matérielle : L'élaboration de la nomenclature détaillée m'a formé à la rigueur industrielle. 
+                            J'ai appris à traduire des valeurs théoriques en références fournisseurs précises, garantissant ainsi l'approvisionnement et la reproductibilité du système.</li>
+                    </ul>
+                    En synthèse, je suis capable de produire les documents techniques essentiels pour permettre la fabrication concrète d'un système électronique.</p>
                 </article>
             </div>
 
@@ -398,34 +587,78 @@
 
                 <article class="trace-block">
                     <div class="trace-header">
-                        <h4>Nom de la trace : [À COMPLÉTER]</h4>
+                        <h4>Fiche de contrôle visuel (SAÉ GBF)</h4>
+                        <span class="trace-date">septembre 2025</span>
                     </div>
                     <div class="grid-2 trace-content">
                         <div class="trace-text">
                             <div class="trace-field">
                                 <strong>Que montre la trace ?</strong>
-                                <p><em>[À COMPLÉTER]</em></p>
+                                <p>Une liste des points de contrôle que j'ai effectué pendant l'assemblage (sens des composants, qualité des soudures) avant la mise sous tension.</p>
                             </div>
                             <div class="trace-field">
                                 <strong>Commentaire</strong>
-                                <p><em>[À COMPLÉTER]</em></p>
+                                <p>Appliquer une procédure d'essai ne consiste pas uniquement à brancher l'appareil à la fin. Cette trace montre la méthode préventive utilisée pour valider chaque étape de la fabrication (composants polarisés, soudures) et éviter la destruction du matériel.</p>
                             </div>
                             <div class="trace-field">
                                 <strong>Texte Réflexif</strong>
-                                <p><em>[À COMPLÉTER]</em></p>
+                                <p>J'ai appris que la fiabilité se construit étape par étape. En vérifiant systématiquement le sens des composants (via la datasheet ) et la propreté des soudures avant de passer à la suite, j'ai évité le risque de dégrader un composant au démarrage. Cette rigueur m'a permis de valider mon montage du premier coup, contrairement à une approche où l'on soude tout sans réfléchir.</p>
                             </div>
                         </div>
                         <div class="trace-media">
-                            <figure>
-                                <img src="image_placeholder.jpg" alt="Preuve d'essai" loading="lazy">
-                            </figure>
+                            <object data="controle_visuel_etape_par_etape_sae_gbf.pdf" type="application/pdf" width="100%" height="500px" class="trace-pdf-viewer">
+                                <div class="pdf-fallback-msg">
+                                    <p>Votre navigateur ne peut pas afficher ce PDF.</p>
+                                    <a href="controle_visuel_etape_par_etape_sae_gbf.pdf" class="btn btn-primary">Télécharger le fichier</a>
+                                </div>
+                            </object>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="trace-block">
+                    <div class="trace-header">
+                        <h4>Relevés de tension en charge (SAÉ Alimentation)</h4>
+                        <span class="trace-date">novembre 2025</span>
+                    </div>
+                    <div class="grid-2 trace-content">
+                        <div class="trace-text">
+                            <div class="trace-field">
+                                <strong>Que montre la trace ?</strong>
+                                <p>Le tableau de mesures validant que la tension de sortie reste réglable (1,2V à 13,5V) même lorsqu'une charge (résistance) est connectée.</p>
+                            </div>
+                            <div class="trace-field">
+                                <strong>Commentaire</strong>
+                                <p>Cette procédure met en œuvre des instruments de mesure (multimètre MX 5060) pour valider la stabilité de la régulation, critère principal du cahier des charges.</p>
+                            </div>
+                            <div class="trace-field">
+                                <strong>Texte Réflexif</strong>
+                                <p>J'ai appris qu'il ne suffit pas qu'un système s'allume pour qu'il soit validé. Seule une procédure de test rigoureuse m'a permis de confirmer que mon alimentation tenait ses promesses techniques.</p>
+                            </div>
+                        </div>
+                        <div class="trace-media">
+                            <object data="releves_de_tension_en_charge_sae_alimentation.pdf" type="application/pdf" width="100%" height="500px" class="trace-pdf-viewer">
+                                <div class="pdf-fallback-msg">
+                                    <p>Votre navigateur ne peut pas afficher ce PDF.</p>
+                                    <a href="releves_de_tension_en_charge_sae_alimentation.pdf" class="btn btn-primary">Télécharger le fichier</a>
+                                </div>
+                            </object>
                         </div>
                     </div>
                 </article>
 
                 <article class="text-block" style="margin-top: 20px;">
-                    <h4>Bilan de l'apprentissage</h4>
-                    <p><em>[À COMPLÉTER]</em></p>
+                    <h4>Bilan de l'apprentissage au semestre 1</h4>
+                    <p><strong>VÉRIFIER : Appliquer une procédure d'essais</strong><br><br>
+                    
+                    Ce semestre m'a permis de comprendre que "vérifier" ne signifie pas simplement "essayer", mais suivre un protocole rigoureux pour garantir la conformité et la sécurité d'un système.
+                    <ul>
+                        <li>Contrôle préventif (avant allumage) : Avec la fiche de contrôle du GBF, j'ai appris que la validation commence avant la mise sous tension. 
+                            J'ai acquis le réflexe de vérifier systématiquement la polarité des composants et la qualité des soudures pour prévenir tout risque de destruction matérielle.</li>
+                        <li>Validation fonctionnelle (en condition) : À travers les relevés en charge de l'alimentation, j'ai appris à qualifier les performances techniques d'un système. 
+                            Je suis capable de mettre en œuvre des mesures physiques pour quantifier les écarts entre le comportement observé et les exigences du cahier des charges, garantissant ainsi la fiabilité du système.</li>
+                    </ul>
+                    En synthèse, je suis capable de dérouler une procédure d'essais complète, allant de l'inspection visuelle de sécurité jusqu'à la validation instrumentale des performances.</p>
                 </article>
             </div>
 
@@ -439,34 +672,78 @@
 
                 <article class="trace-block">
                     <div class="trace-header">
-                        <h4>Nom de la trace : [À COMPLÉTER]</h4>
+                        <h4>Erreur d'implantation sur carte binôme (SAÉ Alimentation)</h4>
+                        <span class="trace-date">novembre 2025</span>
                     </div>
                     <div class="grid-2 trace-content">
                         <div class="trace-text">
                             <div class="trace-field">
                                 <strong>Que montre la trace ?</strong>
-                                <p><em>[À COMPLÉTER]</em></p>
+                                <p>L'identification d'une erreur de disposition des composants sur la carte d'un collègue qui empêchait le fonctionnement du circuit.</p>
                             </div>
                             <div class="trace-field">
                                 <strong>Commentaire</strong>
-                                <p><em>[À COMPLÉTER]</em></p>
+                                <p>Cette trace illustre la capacité de diagnostic visuel et la comparaison entre le schéma théorique et la réalisation pratique défaillante.</p>
                             </div>
                             <div class="trace-field">
                                 <strong>Texte Réflexif</strong>
-                                <p><em>[À COMPLÉTER]</em></p>
+                                <p>Débugger le travail d'un autre a affûté mon sens de l'observation. Cela m'a forcé à être méthodique pour isoler l'erreur d'implantation qui bloquait le système, renforçant ma compréhension du lien schéma/réel.</p>
                             </div>
                         </div>
                         <div class="trace-media">
-                            <figure>
-                                <img src="image_placeholder.jpg" alt="Illustration du bug" loading="lazy">
-                            </figure>
+                            <object data="erreur_d_implantation_sur_carte_binome_sae_alimentation.pdf" type="application/pdf" width="100%" height="500px" class="trace-pdf-viewer">
+                                <div class="pdf-fallback-msg">
+                                    <p>Votre navigateur ne peut pas afficher ce PDF.</p>
+                                    <a href="erreur_d_implantation_sur_carte_binome_sae_alimentation.pdf" class="btn btn-primary">Télécharger le fichier</a>
+                                </div>
+                            </object>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="trace-block">
+                    <div class="trace-header">
+                        <h4>Instabilité de la mesure de fréquence (SAÉ Voltmètre)</h4>
+                        <span class="trace-date">décembre 2025</span>
+                    </div>
+                    <div class="grid-2 trace-content">
+                        <div class="trace-text">
+                            <div class="trace-field">
+                                <strong>Que montre la trace ?</strong>
+                                <p>Le constat que la fréquence affichée fluctuait de manière incohérente à cause de déclenchements intempestifs sur le signal bruité.</p>
+                            </div>
+                            <div class="trace-field">
+                                <strong>Commentaire</strong>
+                                <p>Cette trace met en évidence un dysfonctionnement : le système était trop sensible au bruit et comptait de faux cycles avec un seuil simple.</p>
+                            </div>
+                            <div class="trace-field">
+                                <strong>Texte Réflexif</strong>
+                                <p>Après avoir pensé que mon code était faux, j'ai identifié que le problème venait de la nature physique du signal (bruit) que mon algorithme initial ne savait pas gérer.</p>
+                            </div>
+                        </div>
+                        <div class="trace-media">
+                            <object data="instabilite_de_la_mesure_de_frequence_sae_voltmetre.pdf" type="application/pdf" width="100%" height="500px" class="trace-pdf-viewer">
+                                <div class="pdf-fallback-msg">
+                                    <p>Votre navigateur ne peut pas afficher ce PDF.</p>
+                                    <a href="instabilite_de_la_mesure_de_frequence_sae_voltmetre.pdf" class="btn btn-primary">Télécharger le fichier</a>
+                                </div>
+                            </object>
                         </div>
                     </div>
                 </article>
 
                 <article class="text-block" style="margin-top: 20px;">
-                    <h4>Bilan de l'apprentissage</h4>
-                    <p><em>[À COMPLÉTER]</em></p>
+                    <h4>Bilan de l'apprentissage au semestre 1</h4>
+                    <p><strong>VÉRIFIER : Identifier un dysfonctionnement</strong><br><br>
+                    
+                    Ce semestre m'a appris que le diagnostic technique ne repose pas sur le hasard, mais sur une investigation méthodique pour isoler la cause d'une panne.
+                    <ul>
+                        <li>Investigation matérielle : L'expérience du dépannage croisé sur la SAÉ Alimentation a affûté mon sens de l'observation. 
+                            J'ai compris qu'une inspection visuelle, comparant point par point le schéma théorique à la réalisation physique, est souvent plus efficace que le multimètre pour repérer des erreurs topologiques (implantations, courts-circuits).</li>
+                        <li>Analyse système : Face à l'instabilité du voltmètre, j'ai appris à ne pas remettre en cause systématiquement le code. 
+                            J'ai acquis la capacité de distinguer une erreur de logique logicielle d'une perturbation physique externe, ce qui est crucial pour faire une bonne correction.</li>
+                    </ul>
+                    En synthèse, je suis capable d'analyser un système défaillant (qu'il soit analogique ou numérique) pour identifier l'origine précise du dysfonctionnement.</p>
                 </article>
             </div>
 
@@ -480,47 +757,109 @@
 
                 <article class="trace-block">
                     <div class="trace-header">
-                        <h4>Nom de la trace : [À COMPLÉTER]</h4>
+                        <h4>Analyse des straps et optimisation (SAÉ Alimentation)</h4>
+                        <span class="trace-date">novembre 2025</span>
                     </div>
                     <div class="grid-2 trace-content">
                         <div class="trace-text">
                             <div class="trace-field">
                                 <strong>Que montre la trace ?</strong>
-                                <p><em>[À COMPLÉTER]</em></p>
+                                <p>Le constat qu'une mauvaise disposition entraîne un excès de fils (straps) et la proposition d'optimiser le placement pour gagner de l'espace.</p>
                             </div>
                             <div class="trace-field">
                                 <strong>Commentaire</strong>
-                                <p><em>[À COMPLÉTER]</em></p>
+                                <p>Cette trace décrit l'effet négatif d'une conception précipitée (complexité, fragilité) et propose une action corrective (mieux préparer l'implantation).</p>
                             </div>
                             <div class="trace-field">
                                 <strong>Texte Réflexif</strong>
-                                <p><em>[À COMPLÉTER]</em></p>
+                                <p>J'ai réalisé que l'optimisation n'est pas un luxe. Un circuit mal agencé fonctionne peut-être, mais il est fragile et difficile à maintenir. Cette analyse m'a poussé à rechercher l'efficacité et la propreté dans mes conceptions futures.</p>
                             </div>
                         </div>
                         <div class="trace-media">
-                            <figure>
-                                <img src="image_placeholder.jpg" alt="Analyse d'impact" loading="lazy">
-                            </figure>
+                            <object data="analyse_des_straps_et_optimisation_sae_alimentation.pdf" type="application/pdf" width="100%" height="500px" class="trace-pdf-viewer">
+                                <div class="pdf-fallback-msg">
+                                    <p>Votre navigateur ne peut pas afficher ce PDF.</p>
+                                    <a href="analyse_des_straps_et_optimisation_sae_alimentation.pdf" class="btn btn-primary">Télécharger le fichier</a>
+                                </div>
+                            </object>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="trace-block">
+                    <div class="trace-header">
+                        <h4>Code de l'Hystérésis Logicielle (SAÉ Voltmètre)</h4>
+                        <span class="trace-date">décembre 2025</span>
+                    </div>
+                    <div class="grid-2 trace-content">
+                        <div class="trace-text">
+                            <div class="trace-field">
+                                <strong>Que montre la trace ?</strong>
+                                <p>L'implémentation d'un double seuil de détection dans le code pour stabiliser la mesure de fréquence.</p>
+                            </div>
+                            <div class="trace-field">
+                                <strong>Commentaire</strong>
+                                <p>C'est la solution corrective technique au problème de bruit identifié. Elle décrit comment l'algorithme a été modifié pour ignorer les petites variations parasites.</p>
+                            </div>
+                            <div class="trace-field">
+                                <strong>Texte Réflexif</strong>
+                                <p>J'ai compris qu'un dysfonctionnement est une opportunité d'amélioration. Face au bruit, j'ai implémenté une solution (hystérésis) qui a non seulement corrigé le problème, mais a rendu mon fréquencemètre beaucoup plus fiable.</p>
+                            </div>
+                        </div>
+                        <div class="trace-media">
+                            <object data="code_de_l_hysteresis_logicielle_sae_voltmetre.pdf" type="application/pdf" width="100%" height="500px" class="trace-pdf-viewer">
+                                <div class="pdf-fallback-msg">
+                                    <p>Votre navigateur ne peut pas afficher ce PDF.</p>
+                                    <a href="code_de_l_hysteresis_logicielle_sae_voltmetre.pdf" class="btn btn-primary">Télécharger le fichier</a>
+                                </div>
+                            </object>
                         </div>
                     </div>
                 </article>
 
                 <article class="text-block" style="margin-top: 20px;">
-                    <h4>Bilan de l'apprentissage</h4>
-                    <p><em>[À COMPLÉTER]</em></p>
+                    <h4>Bilan de l'apprentissage au semestre 1</h4>
+                    <p><strong>VÉRIFIER : Décrire les effets d'un dysfonctionnement</strong><br><br>
+                    
+                    Ce semestre m'a permis de comprendre qu'un bon technicien ne se contente pas de constater un problème, il doit en analyser les conséquences pour proposer une bonne solution d'amélioration.
+                    <ul>
+                        <li>Optimisation matérielle : Avec l'analyse des straps sur la SAÉ Alimentation, j'ai identifié qu'une mauvaise implantation a pour effet de fragiliser le circuit (faux contacts, complexité). 
+                            J'ai appris à proposer des correctifs structurels, comme la réorganisation des composants pour utiliser leurs pattes comme liaisons, rendant le système plus robuste et maintenable.</li>
+                        <li>Correction logicielle : Face à l'instabilité des mesures sur la SAÉ Voltmètre, j'ai décrit l'effet néfaste du bruit électronique sur le comptage. 
+                            J'ai su proposer et implémenter une solution qui a transformé un dysfonctionnement bloquant en une fonctionnalité efficace.</li>
+                    </ul>
+                    En synthèse, je suis capable de dépasser le simple dépannage pour concevoir des solutions correctives (matérielles ou logicielles) qui fiabilisent le système sur le long terme.</p>
                 </article>
             </div>
         </section>
 
         <section id="contact" class="section container">
             <h2>Contact</h2>
-            <p>N'hésitez pas à me contacter par email : <a href="mailto:lucaspichaudpro@gmail.com">lucaspichaudpro@gmail.com</a></p>
+            
+            <div class="contact-wrapper">
+                
+                <div class="contact-item">
+                    <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
+                        <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
+                    </svg>
+                    <a href="mailto:lucaspichaudpro@gmail.com">lucaspichaudpro@gmail.com</a>
+                </div>
+
+                <div class="contact-item">
+                    <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 4.5z" clip-rule="evenodd" />
+                    </svg>
+                    <a href="tel:+33600000000">07 80 37 01 72</a>
+                </div>
+
+            </div>
         </section>
     </main>
 
     <footer class="site-footer">
         <div class="container">
-            <p>© 2025 Lucas PICHAUD — Portfolio BUT GEII</p>
+            <p>Lucas PICHAUD — Portfolio BUT GEII</p>
         </div>
     </footer>
 

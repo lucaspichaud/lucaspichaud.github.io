@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalImg = document.getElementById("img-to-zoom");
     const captionText = document.getElementById("caption");
     const closeBtn = document.getElementsByClassName("close-modal")[0];
-    const zoomableImages = document.querySelectorAll('.program-images img, .referentiel-img img, .dual-images img');
+    const zoomableImages = document.querySelectorAll('.program-images img, .referentiel-img img, .dual-images img, .trace-media img');
     zoomableImages.forEach(img => {
         img.addEventListener('click', function(){
             if (modal) {
